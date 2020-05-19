@@ -89,6 +89,7 @@ void pushNodesOntoQueue(priority_queue<Node*, vector<Node*>, Comp>& pq, vector<N
 
 int main() {
 
+    // Create some nodes to add to a priority queue below
     vector<Node*> nodes;
     nodes.push_back(new Node("Carl", 14));
     nodes.push_back(new Node("Diana", 17));
@@ -96,11 +97,13 @@ int main() {
     nodes.push_back(new Node("Alice", 17));
     nodes.push_back(new Node("Bob", 20));
 
+    // Instantiate priority queue that uses the age comparator and print out the entries from highest to lowest priority
     priority_queue<Node*, vector<Node*>, NodePtrAgeComparator> ageQueue;
     pushNodesOntoQueue<NodePtrAgeComparator>(ageQueue, nodes);
     cout << "The entries in the age queue, with higher age being given higher priority:\n" << endl;
     printPQContents<NodePtrAgeComparator>(ageQueue);
 
+    // Instantiate priority queue that uses the name comparator and print out the entries from highest to lowest priority
     priority_queue<Node*, vector<Node*>, NodePtrNameComparator> nameQueue;
     pushNodesOntoQueue<NodePtrNameComparator>(nameQueue, nodes);
     cout << "\nThe entries in the name queue, with lesser alphabetical name being given higher priority:\n" << endl;

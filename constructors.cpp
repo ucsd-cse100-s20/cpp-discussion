@@ -44,7 +44,7 @@ int main() {
     Pokemon pikachu3("Pikachu", 25, "CHUUUUUUUUUUU");   // this calls constructor #2 using the default 4th parameter
     cout << pikachu3;
 
-    Pokemon pikachu4("Pikachu", 25, "Pika Pika", 5);    // this calls constructor #2 and overrides the default 4rd parameter
+    Pokemon pikachu4("Pikachu", 25, "Pika Pika", 5);    // this calls constructor #2 and overrides the default 4th parameter
     cout << pikachu4;
 
     Pokemon bulbasaur1;                                 // this calls our default constructor (#3) with the default parameters

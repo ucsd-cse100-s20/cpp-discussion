@@ -115,7 +115,7 @@ int main() {
 
 
     // Reading the chars back into an array
-    char* arrRecovered = new char[s.size() + 1];
+    char* arrRecovered = new char[s.size()];
     finText.open("spongebob-with-array.txt", ios::binary);
     finText.read(arrRecovered, s.size());
     finText.close();
